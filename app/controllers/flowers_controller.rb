@@ -22,6 +22,7 @@ class FlowersController < ApplicationController
 
   private
   def flower_params
-    params.require(:flower).permit([:edible, :family_id])
+    # Added :name and :color to the permit
+    params.require(:flower).permit([:edible, :family_id, :name, :color])
   end
 end
